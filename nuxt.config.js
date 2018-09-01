@@ -13,6 +13,12 @@ module.exports = {
   modules: [
     '@nuxtjs/axios',
   ],
+  css: [
+    'element-ui/lib/theme-chalk/index.css'
+  ],
+  plugins: [
+    '@/plugins/element-ui'
+  ],
   loading: false,
   build: {
     extend (config, { isDev, isClient }) {

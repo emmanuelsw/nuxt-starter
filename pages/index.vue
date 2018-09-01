@@ -1,7 +1,6 @@
 <template>
   <section class="container">
     <div>
-      <app-logo/>
       <h1 class="title">
         Home
       </h1>
@@ -12,36 +11,29 @@
         <nuxt-link to="/about" class="button--green">About</nuxt-link>
       </div>
       <div class="links">
-        <nuxt-link to="/users" class="button--green">Users</nuxt-link>
+        <nuxt-link to="/api" class="button--green">API</nuxt-link>
       </div>
     </div>
   </section>
 </template>
 
 <script>
-import AppLogo from '~/components/AppLogo.vue'
-
 export default {
-  components: {
-    AppLogo
-  }
 }
 </script>
 
 <style scoped>
 .container {
-  min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
   text-align: center;
 }
 
 .title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
+  font-family: -apple-system, "Helvetica Neue", sans-serif;
   display: block;
   font-weight: 300;
-  font-size: 100px;
+  font-size: 70px;
   color: #35495e;
   letter-spacing: 1px;
 }
