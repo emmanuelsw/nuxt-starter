@@ -1,29 +1,32 @@
 <template>
-  <el-container>
-    <el-header class="header">
-      <el-row>
-        <el-col :span="20" :offset="2">
-          <el-row type="flex" justify="space-between">
-            <el-col :span="6">
-              <img class="logo" src="~/assets/bm-texture.png" alt="Logo">
-            </el-col>
-            <el-col :span="18" class="menu-container">
-              <el-menu class="menu" mode="horizontal">
-                <el-menu-item index="1">Home</el-menu-item>
-                <el-menu-item index="2">Processing Center</el-menu-item>
-                <el-menu-item index="3">Info</el-menu-item>
-                <el-menu-item index="4">Orders</el-menu-item>
-                <el-menu-item index="5">Contact</el-menu-item>
-              </el-menu>
-            </el-col>
-          </el-row>
-        </el-col>
-      </el-row>
-    </el-header>
-    <el-main>
-      <nuxt/>
-    </el-main>
-  </el-container>
+  <div>
+    <div class="bg-image"></div>
+    <el-container class="main-container">
+      <el-header class="header">
+        <el-row>
+          <el-col :span="20" :offset="2">
+            <el-row type="flex" justify="space-between">
+              <el-col :xs="24" :sm="4">
+                <img class="logo" src="~/assets/bm-texture.png" alt="Logo">
+              </el-col>
+              <el-col :xs="24" :sm="18" class="menu-container">
+                <el-menu class="menu" mode="horizontal">
+                  <el-menu-item index="1">Home</el-menu-item>
+                  <el-menu-item index="2">Videos</el-menu-item>
+                  <el-menu-item index="3">Tour</el-menu-item>
+                  <el-menu-item index="4">Sakura Gakuin</el-menu-item>
+                  <el-menu-item index="5">Contact</el-menu-item>
+                </el-menu>
+              </el-col>
+            </el-row>
+          </el-col>
+        </el-row>
+      </el-header>
+      <el-main>
+        <nuxt/>
+      </el-main>
+    </el-container>
+  </div>
 </template>
 
 <style>
@@ -44,6 +47,23 @@ html {
 
 body {
   min-height: 100vh;
+  background-color: #000;
+}
+
+.bg-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/fox-left.png'), url('/fox-right.png');
+  background-repeat: no-repeat, no-repeat;
+  background-position: left 80px,right 80px;
+  background-size: auto 100%;
+}
+
+.main-container {
+  position: relative;
 }
 
 .button--green {
@@ -76,7 +96,12 @@ body {
 }
 
 .header, .menu, .menu li:hover, .menu li:focus {
-  background-color: #1e272e !important;
+  background-color: #000 !important;
+}
+
+.header {
+  padding-top: 15px;
+  margin-bottom: 10px;
 }
 
 .logo {
@@ -88,8 +113,8 @@ body {
   justify-content: flex-end;
 }
 
-.menu {
-  border-bottom: none;
+.el-menu--horizontal {
+  border-bottom: 0;
 }
 
 .menu li {
