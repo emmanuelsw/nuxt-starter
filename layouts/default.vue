@@ -56,7 +56,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('/fox-left.png'), url('/fox-right.png');
+  background: url('~/assets/fox-left.png'), url('~/assets/fox-right.png');
   background-repeat: no-repeat, no-repeat;
   background-position: left 80px,right 80px;
   background-size: auto 100%;
